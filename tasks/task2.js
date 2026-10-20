@@ -2,7 +2,12 @@
 //  при цьому пропускаючи всі цифри.
 
 function reverseWithoutNumbers(str) {
-  // Ваш код тут
+  const numbers = "0123456789";
+  return str
+    .split('')
+    .filter(char => !numbers.includes(char))
+    .reverse()
+    .join('');
 }
 
 console.log(reverseWithoutNumbers("hello123world456")); // Виведе: "dlrowolleh"
